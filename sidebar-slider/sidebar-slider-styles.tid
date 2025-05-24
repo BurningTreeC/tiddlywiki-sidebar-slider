@@ -16,6 +16,25 @@ code-body: yes
 	background: linear-gradient(<<colour muted-foreground>>, <<colour muted-foreground>>) no-repeat center/2px 100%;
 }
 
+.tc-main-slider-chevron {
+	position: fixed;
+	top: 0;
+	transform: translateX(calc(<<sidebar.resizer.width>> / 2));
+}
+
+.tc-sidebar-left .tc-main-slider-chevron {
+	transform: translateX(calc(-1 * (<<sidebar.resizer.width>> / 2)));
+}
+
+.tc-main-slider-chevron-container {
+	background-color: <<colour muted-foreground>>;
+	opacity: <<get.theme.metric slideropacity>>;
+}
+
+.tc-mein-slider-chevron-container:hover {
+	opacity: <<get.theme.metric slideropacityhover>>;
+}
+
 .tc-slider:hover {
 	opacity: <<get.theme.metric slideropacityhover>>;
 }
@@ -116,7 +135,7 @@ code-body: yes
 			@media (pointer: coarse) {
 
 				.tc-slider.tc-main-slider {
-					opacity: min(calc(3 * <<get.theme.metric slideropacity>>),1);
+					opacity: min(calc(2 * <<get.theme.metric slideropacity>>),1);
 				}
 			}
 
@@ -124,11 +143,11 @@ code-body: yes
 
 		<%if [<set.storywidth.storyright>match[yes]] %>
 
-			.tc-slider.tc-main-slider {
+			.tc-main-slider-chevron, .tc-slider.tc-main-slider {
 				left: clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>> - (2 * <<get.story-sidebar.overlap>> / 3)),calc(<<get.theme.metric storyleft>> + <<get.theme.metric storywidth>> - (2 * <<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> + <<get.story-sidebar.overlap>> + <<get.theme.storywidthoverlap>> - (2 * <<get.story-sidebar.overlap>> / 3)));
 			}
 
-			.tc-sidebar-left .tc-slider.tc-main-slider {
+			.tc-sidebar-left .tc-main-slider-chevron, .tc-sidebar-left .tc-slider.tc-main-slider {
 				left: auto;
 				right: clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>> - (2 * <<get.story-sidebar.overlap>> / 3)),calc(<<get.theme.metric storyleft>> + <<get.theme.metric storywidth>> - (2 * <<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> + <<get.story-sidebar.overlap>> + <<get.theme.storywidthoverlap>> - (2 * <<get.story-sidebar.overlap>> / 3)));
 			}
@@ -137,11 +156,11 @@ code-body: yes
 
 		<%if [<set.sidebarwidth>match[yes]] %>
 
-			.tc-slider.tc-main-slider {
+			.tc-main-slider-chevron, .tc-slider.tc-main-slider {
 				left: min(clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>> - <<get.story-sidebar.overlap>> + (<<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarwidth>> + (<<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> + (<<get.story-sidebar.overlap>> / 3))),calc(100% - <<get.theme.metric sidebarminwidth>> + (<<get.story-sidebar.overlap>> / 3)));
 			}
 
-			.tc-sidebar-left .tc-slider.tc-main-slider {
+			.tc-sidebar-left .tc-main-slider-chevron, .tc-sidebar-left .tc-slider.tc-main-slider {
 				left: auto;
 				right: min(clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>> - <<get.story-sidebar.overlap>> + (<<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarwidth>> + (<<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> + (<<get.story-sidebar.overlap>> / 3))),calc(100% - <<get.theme.metric sidebarminwidth>> + (<<get.story-sidebar.overlap>> / 3)));
 			}
@@ -150,11 +169,11 @@ code-body: yes
 
 		<%if [<set.centralised>match[yes]] %>
 
-			.tc-slider.tc-main-slider {
+			.tc-main-slider-chevron, .tc-slider.tc-main-slider {
 				left: min(calc(50% + (<<get.theme.metric storywidth>> / 2) - (2 * <<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> - (2 * <<get.story-sidebar.overlap>> / 3)));
 			}
 
-			.tc-sidebar-left .tc-slider.tc-main-slider {
+			.tc-sidebar-left .tc-main-slider-chevron, .tc-sidebar-left .tc-slider.tc-main-slider {
 				left: auto;
 				z-index: 1;
 				right: min(calc(50% + (<<get.theme.metric storywidth>> / 2) - (2 * <<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> - (2 * <<get.story-sidebar.overlap>> / 3)));
