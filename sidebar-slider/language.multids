@@ -1,0 +1,26 @@
+title: $:/language/
+
+Left: Left
+Right: Right
+ThemeTweaks/ThemeTweaks/Hint: You can tweak certain aspects of the ''<$text text={{{ [<get.current.theme>get[name]] :else[[current]] }}}/>'' theme.
+ThemeTweaks/Options/SidebarPosition: Sidebar position
+ThemeTweaks/Options/SidebarResizer: Sidebar resizer
+ThemeTweaks/Metrics/PreviewSliderWidth: Preview slider width
+ThemeTweaks/Metrics/PreviewSliderWidth/Hint: the width of the slider between editor and editor preview
+ThemeTweaks/Metrics/SidebarPadding: Sidebar padding
+ThemeTweaks/Metrics/SidebarPadding/Hint: the padding of the sidebar between sidebar and story river
+ThemeTweaks/Metrics/SidebarResizer/Hint: the values for `storyleft`, `storyright`, `storywidth`, `storyminwidth`, `sidebarwidth` and `sidebarminwidth` need to be ''absolute'' CSS units, ''percentages'' or ''em'' units in order for the sidebar resizer to work
+ThemeTweaks/Metrics/SliderOpacity: Slider opacity
+ThemeTweaks/Metrics/SliderOpacity/Hint: the opacity of the sliders
+ThemeTweaks/Metrics/SliderOpacityHover: Slider opacity hover
+ThemeTweaks/Metrics/SliderOpacityHover/Hint: the opacity on hover of the sliders
+ThemeTweaks/Metrics/StoryMinWidth: Minimum Story width
+ThemeTweaks/Metrics/StoryMinWidth/Hint: controls the minimum width of the tiddlers in the story river
+ThemeTweaks/Metrics/StoryPaddingLeft: Story Padding Left
+ThemeTweaks/Metrics/StoryPaddingLeft/Hint: the left padding of the story river
+ThemeTweaks/Metrics/StoryPaddingRight: Story Padding Right
+ThemeTweaks/Metrics/StoryPaddingRight/Hint: the right padding of the story river
+ThemeTweaks/Metrics/SidebarMinWidth: Minimum Sidebar width
+ThemeTweaks/Metrics/SidebarMinWidth/Hint: the minimum width of the sidebar
+ThemeTweaks/Metrics/TiddlerWidth: Tiddler width
+ThemeTweaks/Metrics/TiddlerWidth/Hint: within the story river
