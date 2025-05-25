@@ -17,7 +17,7 @@ tags: $:/tags/PageTemplate
 			style.cursor="pointer"
 		>
 
-			<div style.width="10px" style.display="flex">
+			<div style.width="15px" style.display="flex">
 
 				<%if [<get.theme.option sidebarposition>match[left]] %>
 					{{$:/core/images/chevron-right}}
