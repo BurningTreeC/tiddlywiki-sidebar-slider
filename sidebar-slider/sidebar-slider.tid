@@ -47,6 +47,10 @@ title: $:/plugins/BTC/SidebarSlider/sidebar-slider
 :else[<qualify>addsuffix<get.sidebar.width.tiddler>addsuffix<currentTiddler>sha256[]addprefix[$:/state/resizing-]]
 \end
 
+\procedure main-slider-chevron-click-actions()
+<$action-setfield $tiddler="$:/state/sidebar" text="no"/>
+\end
+
 \procedure set-theme-throttling(metric,tiddler)
 <%if [<set.throttling>match[yes]] %>
 	<$set name="metricsTiddler" value={{{ [<tiddler>getvariable[]!is[blank]] :else[function[get.theme],<metric>] }}}>
@@ -442,35 +446,33 @@ title: $:/plugins/BTC/SidebarSlider/sidebar-slider
 				<%if [<get.slider.condition>match[yes]] %>
 
 					<div
-						class="tc-main-slider-chevron"
-						style.height="100%"
-						style.width="10px"
-						style.display="flex"
-						style.align-items="center"
-						style.justify-content="center"
-					>
-						<div
-							class="tc-main-slider-chevron-container"
-							style.height="115px"
-							style.width="10px"
-							style.display="flex"
-							style.align-items="center"
-							style.justify-content="flex-end"
-						>
-							<%if [<get.theme.option sidebarposition>match[left]] %>
-								{{$:/core/images/chevron-left}}
-							<% else %>
-								{{$:/core/images/chevron-right}}
-							<% endif %>
-						</div>
-					</div>
-
-					<div
 						class=<<get.resizer.class>>
 						style.position=<<get.resizer.style.position>>
 						style.left=<<get.resizer.style.left>>
 						style.width=<<get.resizer.style.width>>
-					/>
+						style.display="flex"
+						style.align-items="center"
+						style.justify-content="flex-end"
+					>
+						<$eventcatcher selector=".tc-main-slider-chevron-container" $click=<<main-slider-chevron-click-actions>>>
+							<div
+								class="tc-main-slider-chevron-container"
+								style.height="115px"
+								style.width="10px"
+								style.display="flex"
+								style.align-items="center"
+								style.justify-content="flex-end"
+								style.cursor="pointer"
+							>
+								<%if [<get.theme.option sidebarposition>match[left]] %>
+									{{$:/core/images/chevron-left}}
+								<% else %>
+									{{$:/core/images/chevron-right}}
+								<% endif %>
+							</div>
+						</$eventcatcher>
+
+					</div>
 
 				<% endif %>
 

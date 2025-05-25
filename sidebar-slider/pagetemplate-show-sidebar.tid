@@ -1,0 +1,31 @@
+title: $:/plugins/BTC/SidebarSlider/ui/PageTemplate/show-sidebar
+tags: $:/tags/PageTemplate
+
+\procedure sidebar-slider-show-sidebar-chevron-actions()
+<$action-deletetiddler $tiddler="$:/state/sidebar"/>
+\end
+
+<%if [{$:/state/sidebar}match[no]] %>
+
+	<$eventcatcher class="tc-sidebar-slider-show-sidebar-eventcatcher" selector=".tc-sidebar-slider-show-sidebar-chevron" $click=<<sidebar-slider-show-sidebar-chevron-actions>>>
+
+		<div class="tc-sidebar-slider-show-sidebar-chevron"
+			style.height="115px"
+			style.width="10px"
+			style.display="flex"
+			style.align-items="center"
+			style.justify-content="flex-end"
+			style.cursor="pointer"
+		>
+
+			<%if [<get.theme.option sidebarposition>match[left]] %>
+				{{$:/core/images/chevron-right}}
+			<% else %>
+				{{$:/core/images/chevron-left}}
+			<% endif %>
+
+		</div>
+
+	</$eventcatcher>
+
+<% endif %>

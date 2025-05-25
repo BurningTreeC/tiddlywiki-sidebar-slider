@@ -296,6 +296,11 @@ div[class*="tc-editor-preview-slider-"] {
 
 	<% endif %>
 
+	.tc-topbar.tc-topbar-right .tc-hide-sidebar-btn, .tc-topbar.tc-topbar-right .tc-show-sidebar-btn,
+	.tc-topbar.tc-topbar-left .tc-hide-sidebar-btn, .tc-topbar.tc-topbar-left .tc-show-sidebar-btn {
+		display: none;
+	}
+
 }
 
 @media (max-width: <<sidebarbreakpoint-plus-one>>) {
@@ -305,3 +310,36 @@ div[class*="tc-editor-preview-slider-"] {
 	}
 
 }
+
+.tc-sidebar-slider-show-sidebar-eventcatcher {
+	position: fixed;
+	top: 0;
+	width: 10px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tc-sidebar-slider-show-sidebar-chevron {
+	background-color: <<colour muted-foreground>>;
+	opacity: <<get.theme.metric slideropacity>>;
+}
+
+.tc-sidebar-slider-show-sidebar-chevron:hover {
+	opacity: <<get.theme.metric slideropacityhover>>;
+}
+
+<%if [<get.theme.option sidebarposition>match[left]] %>
+
+	.tc-sidebar-slider-show-sidebar-eventcatcher {
+		left: 0;
+	}
+
+<% else %>
+
+	.tc-sidebar-slider-show-sidebar-eventcatcher {
+		right: 0;
+	}
+
+<% endif %>
