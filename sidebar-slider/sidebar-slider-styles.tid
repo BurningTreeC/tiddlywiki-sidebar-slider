@@ -123,6 +123,20 @@ code-body: yes
 
 <%if [<get.theme.explicit.option sidebarresizer>match[show]] %>
 
+	<%if [<get.theme.option sidebarposition>match[left]] %>
+
+		.tc-slider.tc-main-slider {
+			justify-content: flex-start;
+		}
+
+	<% else %>
+
+		.tc-slider.tc-main-slider {
+			justify-content: flex-end;
+		}
+
+	<% endif %>
+
 	@media (min-width: <<sidebarbreakpoint>>) {
 
 		@media (pointer: coarse) {

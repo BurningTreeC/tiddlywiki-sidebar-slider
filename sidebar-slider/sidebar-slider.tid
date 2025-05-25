@@ -452,7 +452,6 @@ title: $:/plugins/BTC/SidebarSlider/sidebar-slider
 						style.width=<<get.resizer.style.width>>
 						style.display="flex"
 						style.align-items="center"
-						style.justify-content="flex-end"
 					>
 						<$eventcatcher selector=".tc-main-slider-chevron-container" $click=<<main-slider-chevron-click-actions>>>
 							<div
