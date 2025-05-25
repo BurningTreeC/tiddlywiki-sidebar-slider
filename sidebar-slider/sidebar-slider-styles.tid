@@ -279,13 +279,13 @@ div[class*="tc-editor-preview-slider-"] {
 
 	<%if [<get.theme.option sidebarposition>match[left]] %>
 
-		.tc-topbar.tc-topbar-left .tc-hide-sidebar-btn {
+		.tc-topbar.tc-topbar-left .tc-hide-sidebar-btn, .tc-topbar.tc-topbar-left .tc-show-sidebar-btn {
 			display: none;
 		}
 
 	<% else %>
 
-		.tc-topbar.tc-topbar-right .tc-hide-sidebar-btn {
+		.tc-topbar.tc-topbar-right .tc-hide-sidebar-btn, .tc-topbar.tc-topbar-right .tc-show-sidebar-btn {
 			display: none;
 		}
 
