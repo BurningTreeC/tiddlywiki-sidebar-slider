@@ -284,11 +284,15 @@ div[class*="tc-editor-preview-slider-"] {
 
 	<% endif %>
 
-	<%if [{$:/state/sidebar}!match[no]] %>
+	<%if [<get.theme.option sidebarresizer>match[show]] %>
 
-		.tc-topbar.tc-topbar-right .tc-hide-sidebar-btn, .tc-topbar.tc-topbar-left .tc-hide-sidebar-btn {
-			display: none;
-		}
+		<%if [{$:/state/sidebar}!match[no]] %>
+
+			.tc-topbar.tc-topbar-right .tc-hide-sidebar-btn, .tc-topbar.tc-topbar-left .tc-hide-sidebar-btn {
+				display: none;
+			}
+
+		<% endif %>
 
 	<% endif %>
 
