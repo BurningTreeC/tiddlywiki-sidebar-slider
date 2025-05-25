@@ -6,6 +6,10 @@ code-body: yes
 
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock conditional html
 
+body.tc-body {
+	scrollbar-gutter: stable both-edges;
+}
+
 .tc-slider {
 	position: fixed;
 	top: 0;
@@ -14,16 +18,6 @@ code-body: yes
 	opacity: <<get.theme.metric slideropacity>>;
 	cursor: ew-resize;
 	background: linear-gradient(<<colour muted-foreground>>, <<colour muted-foreground>>) no-repeat center/2px 100%;
-}
-
-.tc-main-slider-chevron {
-	position: fixed;
-	top: 0;
-	transform: translateX(calc(<<sidebar.resizer.width>> / 2));
-}
-
-.tc-sidebar-left .tc-main-slider-chevron {
-	transform: translateX(calc(-1 * (<<sidebar.resizer.width>> / 2)));
 }
 
 .tc-main-slider-chevron-container {
@@ -150,11 +144,11 @@ code-body: yes
 
 		<%if [<set.storywidth.storyright>match[yes]] %>
 
-			.tc-main-slider-chevron, .tc-slider.tc-main-slider {
+			.tc-slider.tc-main-slider {
 				left: clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>> - (2 * <<get.story-sidebar.overlap>> / 3)),calc(<<get.theme.metric storyleft>> + <<get.theme.metric storywidth>> - (2 * <<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> + <<get.story-sidebar.overlap>> + <<get.theme.storywidthoverlap>> - (2 * <<get.story-sidebar.overlap>> / 3)));
 			}
 
-			.tc-sidebar-left .tc-main-slider-chevron, .tc-sidebar-left .tc-slider.tc-main-slider {
+			.tc-sidebar-left .tc-slider.tc-main-slider {
 				left: auto;
 				right: clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>> - (2 * <<get.story-sidebar.overlap>> / 3)),calc(<<get.theme.metric storyleft>> + <<get.theme.metric storywidth>> - (2 * <<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> + <<get.story-sidebar.overlap>> + <<get.theme.storywidthoverlap>> - (2 * <<get.story-sidebar.overlap>> / 3)));
 			}
@@ -163,11 +157,11 @@ code-body: yes
 
 		<%if [<set.sidebarwidth>match[yes]] %>
 
-			.tc-main-slider-chevron, .tc-slider.tc-main-slider {
+			.tc-slider.tc-main-slider {
 				left: min(clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>> - <<get.story-sidebar.overlap>> + (<<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarwidth>> + (<<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> + (<<get.story-sidebar.overlap>> / 3))),calc(100% - <<get.theme.metric sidebarminwidth>> + (<<get.story-sidebar.overlap>> / 3)));
 			}
 
-			.tc-sidebar-left .tc-main-slider-chevron, .tc-sidebar-left .tc-slider.tc-main-slider {
+			.tc-sidebar-left .tc-slider.tc-main-slider {
 				left: auto;
 				right: min(clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>> - <<get.story-sidebar.overlap>> + (<<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarwidth>> + (<<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> + (<<get.story-sidebar.overlap>> / 3))),calc(100% - <<get.theme.metric sidebarminwidth>> + (<<get.story-sidebar.overlap>> / 3)));
 			}
@@ -176,11 +170,11 @@ code-body: yes
 
 		<%if [<set.centralised>match[yes]] %>
 
-			.tc-main-slider-chevron, .tc-slider.tc-main-slider {
+			.tc-slider.tc-main-slider {
 				left: min(calc(50% + (<<get.theme.metric storywidth>> / 2) - (2 * <<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> - (2 * <<get.story-sidebar.overlap>> / 3)));
 			}
 
-			.tc-sidebar-left .tc-main-slider-chevron, .tc-sidebar-left .tc-slider.tc-main-slider {
+			.tc-sidebar-left .tc-slider.tc-main-slider {
 				left: auto;
 				z-index: 1;
 				right: min(calc(50% + (<<get.theme.metric storywidth>> / 2) - (2 * <<get.story-sidebar.overlap>> / 3)),calc(100% - <<get.theme.metric sidebarminwidth>> - (2 * <<get.story-sidebar.overlap>> / 3)));
@@ -328,32 +322,41 @@ div[class*="tc-editor-preview-slider-"] {
 .tc-sidebar-slider-show-sidebar-eventcatcher {
 	position: fixed;
 	top: 0;
-	width: 10px;
+	width: 22px;
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
 
 .tc-sidebar-slider-show-sidebar-chevron {
 	background-color: <<colour muted-foreground>>;
-	opacity: <<get.theme.metric slideropacity>>;
+	opacity: calc(<<get.theme.metric slideropacity>> / 2);
 }
 
 .tc-sidebar-slider-show-sidebar-chevron:hover {
-	opacity: <<get.theme.metric slideropacityhover>>;
+	opacity: calc(<<get.theme.metric slideropacityhover>> / 2);
 }
 
 <%if [<get.theme.option sidebarposition>match[left]] %>
 
 	.tc-sidebar-slider-show-sidebar-eventcatcher {
+		justify-content: flex-end;
 		left: 0;
+	}
+
+	.tc-sidebar-slider-show-sidebar-chevron {
+		justify-content: flex-end;
 	}
 
 <% else %>
 
 	.tc-sidebar-slider-show-sidebar-eventcatcher {
+		justify-content: flex-start;
 		right: 0;
+	}
+
+	.tc-sidebar-slider-show-sidebar-chevron {
+		justify-content: flex-start;
 	}
 
 <% endif %>

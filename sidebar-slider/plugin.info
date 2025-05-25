@@ -2,6 +2,6 @@
 	"title": "$:/plugins/BTC/SidebarSlider",
 	"description": "A sidebar slider",
 	"author": "Simon Huber",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"list": "readme license"
 }

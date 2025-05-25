@@ -11,18 +11,21 @@ tags: $:/tags/PageTemplate
 
 		<div class="tc-sidebar-slider-show-sidebar-chevron"
 			style.height="115px"
-			style.width="10px"
+			style.width="22px"
 			style.display="flex"
 			style.align-items="center"
-			style.justify-content="flex-end"
 			style.cursor="pointer"
 		>
 
-			<%if [<get.theme.option sidebarposition>match[left]] %>
-				{{$:/core/images/chevron-right}}
-			<% else %>
-				{{$:/core/images/chevron-left}}
-			<% endif %>
+			<div style.width="10px" style.display="flex">
+
+				<%if [<get.theme.option sidebarposition>match[left]] %>
+					{{$:/core/images/chevron-right}}
+				<% else %>
+					{{$:/core/images/chevron-left}}
+				<% endif %>
+
+			</div>
 
 		</div>
 
