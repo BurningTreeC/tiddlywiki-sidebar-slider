@@ -6,10 +6,6 @@ code-body: yes
 
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock conditional html
 
-body.tc-body {
-	scrollbar-gutter: stable both-edges;
-}
-
 .tc-slider {
 	position: fixed;
 	top: 0;
