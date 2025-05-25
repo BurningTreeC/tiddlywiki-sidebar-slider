@@ -31,6 +31,12 @@ code-body: yes
 	opacity: <<get.theme.metric slideropacity>>;
 }
 
+@media (pointer: coarse) {
+	.tc-main-slider-chevron-container {
+		opacity: 0.3;
+	}
+}
+
 .tc-mein-slider-chevron-container:hover {
 	opacity: <<get.theme.metric slideropacityhover>>;
 }
@@ -123,23 +129,10 @@ code-body: yes
 
 			.tc-slider.tc-main-slider {
 				background: <<colour muted-foreground>>;
+				opacity: 0.1;
 			}
 
-			.tc-slider.tc-main-slider:hover {
-				opacity: <<get.theme.metric slideropacity>>;
-			}
 		}
-
-		<%if [[$:/state/sidebar/resizing]is[tiddler]] %>
-
-			@media (pointer: coarse) {
-
-				.tc-slider.tc-main-slider {
-					opacity: min(calc(2 * <<get.theme.metric slideropacity>>),1);
-				}
-			}
-
-		<% endif %>
 
 		<%if [<set.storywidth.storyright>match[yes]] %>
 
