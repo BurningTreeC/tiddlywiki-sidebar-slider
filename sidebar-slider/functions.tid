@@ -62,6 +62,8 @@ code-body: yes
 
 \function breakpoint-plus-one() [add.one.to.breakpoint{$:/config/plugins/menubar/breakpoint}] :else[{$:/config/plugins/menubar/breakpoint}]
 
+\function sidebarbreakpoint-plus-one() [add.one.to.breakpoint{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}] :else[{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}]
+
 \function get.base.theme.metric.recursive(theme,metric) [<theme>get[dependents]enlist-input[]] :map[get.base.theme.metric<currentTiddler>,<metric>]
 
 \function get.base.theme.metric(theme,metric)

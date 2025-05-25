@@ -274,3 +274,37 @@ div[class*="tc-editor-preview-slider-"] {
 	</$let>
 
 </$list>
+
+@media (min-width: <<sidebarbreakpoint>>) {
+
+	<%if [<get.theme.option sidebarposition>match[left]] %>
+
+		.tc-topbar.tc-topbar-left .tc-hide-sidebar-btn {
+			display: none;
+		}
+
+	<% else %>
+
+		.tc-topbar.tc-topbar-right .tc-hide-sidebar-btn {
+			display: none;
+		}
+
+	<% endif %>
+
+	<%if [{$:/state/sidebar}!match[no]] %>
+
+		.tc-topbar.tc-topbar-right .tc-hide-sidebar-btn, .tc-topbar.tc-topbar-left .tc-hide-sidebar-btn {
+			display: none;
+		}
+
+	<% endif %>
+
+}
+
+@media (max-width: <<sidebarbreakpoint-plus-one>>) {
+	
+	.tc-topbar.tc-topbar-left .tc-hide-sidebar-btn, .tc-topbar.tc-topbar-left .tc-show-sidebar-btn {
+		display: none;
+	}
+
+}
