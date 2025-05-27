@@ -1,6 +1,8 @@
 title: $:/themes/tiddlywiki/centralised/metrics/
 
 sidebarminwidth: 350px
+sliderchevroncontainerwidth: 10.5px
+sliderchevroncontainertransformx: 0px
 storyminwidth: 350px
 storypaddingleft: 42px
 storypaddingright: 42px

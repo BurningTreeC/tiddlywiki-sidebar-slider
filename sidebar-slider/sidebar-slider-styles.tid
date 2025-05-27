@@ -19,6 +19,8 @@ code-body: yes
 .tc-main-slider-chevron-container {
 	background-color: <<colour muted-foreground>>;
 	opacity: <<get.theme.metric slideropacity>>;
+	width: <<get.theme.metric sliderchevroncontainerwidth>>;
+	transform: translateX(<<get.theme.metric sliderchevroncontainertransformx>>);
 }
 
 @media (pointer: coarse) {

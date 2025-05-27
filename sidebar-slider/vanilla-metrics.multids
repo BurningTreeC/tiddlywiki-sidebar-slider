@@ -5,6 +5,8 @@ sidebarbreakpoint: 960px
 sidebarminwidth: 350px
 sidebarpadding: 42px
 sidebarwidth: 350px
+sliderchevroncontainerwidth: 10.5px
+sliderchevroncontainertransformx: 0px
 slideropacity: 0.5
 slideropacityhover: 1
 storypaddingleft: 42px

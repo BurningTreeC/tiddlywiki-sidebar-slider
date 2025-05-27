@@ -8,6 +8,14 @@ caption: {{$:/language/ThemeTweaks/ThemeTweaks}}
 
 \procedure get-theme-tweaks-lingo-hint() <$transclude $variable="lingo" title=`Metrics/$(metricName)$/Hint`/>
 
+\procedure reset-slider-tiddlers()
+<$list filter="StoryLeft StoryRight StoryWidth StoryMinWidth StoryPaddingLeft StoryPaddingRight TiddlerWidth SidebarWidth SidebarPadding +[enlist-input[]]" variable="metricName">
+<$set name="metric" value={{{ [<metricName>lowercase[]] }}}>
+<$action-deletetiddler $tiddler=<<get.theme-tweaks.metric>>/>
+</$set>
+</$list>
+\end
+
 \define lingo-base() $:/language/ThemeTweaks/
 
 \define replacement-text()
@@ -75,6 +83,8 @@ caption: {{$:/language/ThemeTweaks/ThemeTweaks}}
 ! <<lingo Metrics>>
 
 <<lingo Metrics/SidebarResizer/Hint>>
+
+<$button actions=<<reset-slider-tiddlers>>>Reset</$button>
 
 <table>
 <tbody>

@@ -1,0 +1,12 @@
+title: $:/plugins/BTC/SidebarSlider/ui/KeyboardShortcuts/reset
+tags: $:/tags/KeyboardShortcut
+key: ((reset-sidebar-slider))
+
+\import $:/plugins/BTC/SidebarSlider/functions
+\function get.theme-tweaks.metric() [get.theme<metric>]
+
+<$list filter="StoryLeft StoryRight StoryWidth StoryMinWidth StoryPaddingLeft StoryPaddingRight TiddlerWidth SidebarWidth SidebarPadding +[enlist-input[]]" variable="metricName">
+<$set name="metric" value={{{ [<metricName>lowercase[]] }}}>
+<$action-deletetiddler $tiddler=<<get.theme-tweaks.metric>>/>
+</$set>
+</$list>

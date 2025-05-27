@@ -457,7 +457,6 @@ title: $:/plugins/BTC/SidebarSlider/sidebar-slider
 							<div
 								class="tc-main-slider-chevron-container"
 								style.height="115px"
-								style.width="10px"
 								style.display="flex"
 								style.align-items="center"
 								style.justify-content="flex-end"
