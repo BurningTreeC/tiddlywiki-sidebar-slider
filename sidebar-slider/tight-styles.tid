@@ -1,9 +1,9 @@
 title: $:/themes/tiddlywiki/tight/base
-tags: [[$:/tags/Stylesheet]]
+tags: $:/tags/Stylesheet
 
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline conditional
 
-<%if [{$:/theme}match[$:/themes/tiddlywiki/tight]] %>
+<%if [{$:/theme}match[$:/themes/tiddlywiki/tight]] [{$:/theme}match[$:/themes/tiddlywiki/tight-heavier]] %>
 
 @media (max-width: <<sidebarbreakpoint-minus-one>>) {
 }
