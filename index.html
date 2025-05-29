@@ -200,6 +200,8 @@ Error message and password prompt
 
 <li>Installation</li>
 
+<li>Metrics</li>
+
 <li>Star me on GitHub!</li>
 
 </ul>
@@ -235,7 +237,7 @@ Error message and password prompt
 ,
 {"title":"$:/status/RequireReloadDueToPluginChange","text":"no","revision":"0","bag":"default"}
 ,
-{"title":"$:/StoryList","text":"","list":"About Installation [[Star me on GitHub!]]","revision":"1","bag":"default"}
+{"title":"$:/StoryList","text":"","list":"About Metrics Installation [[Star me on GitHub!]]","revision":"1","bag":"default"}
 ,
 {"title":"$:/theme","created":"20250527184518122","modified":"20250529153634294","type":"text/vnd.tiddlywiki","text":"$:/themes/tiddlywiki/snowwhite","revision":"0","bag":"default"}
 ,
@@ -268,6 +270,8 @@ Error message and password prompt
 {"title":"About","created":"20250524071925546","modified":"20250527190139964","tags":"About [[Sidebar Slider]] Plugin","type":"text/vnd.tiddlywiki","text":"!!! This plugin adds a thin vertical bar to your TiddlyWiki which can be dragged and which changes the width of the sidebar or the story river respectively\n\n!!! There are more Features:\n\n* Showing the sidebar on the left\n* CSS unit conversion using integrated functions\n* Double-click on the sidebar slider closes the sidebar\n* A slider between the editor and the editor preview\n* There's a \"Reset\" button under \"Themetweaks\" in the $:/ControlPanel and a \"Reset\" keyboard shortcut \u003Ckbd>alt-S\u003C/kbd>","revision":"0","bag":"default"}
 ,
 {"title":"Installation","created":"20250524072443212","modified":"20250524072756056","tags":"Installation Plugin [[Sidebar Slider]]","type":"text/vnd.tiddlywiki","text":"!!! The simplest way to install this plugin is to drag the following box to your Wiki, save your Wiki and reload\n\n\u003C$set name=\"qualified-state\" value=\u003C\u003Cqualify \"$:/state/plugin\">>>\n{{$:/plugins/BTC/SidebarSlider||$:/core/ui/Components/plugin-info}}\n\u003C/$set>\n\n!!! Keep in mind that this plugin is in early alpha state and is going to be updated continuously, so keep checking for updates!\n\n","revision":"0","bag":"default"}
+,
+{"title":"Metrics","created":"20250529163413934","modified":"20250529165430035","tags":"$:/tags/SideBar","type":"text/vnd.tiddlywiki","text":"!!! You can convert ''absolute'' metrics (and em) to `pixels` using the integrated function `\u003C\u003Cconvert.to.pixels value>>`\n\n* 1em: \u003C\u003Cconvert.to.pixels 1em>>px (see how this translates in the \u003C%if [[storyTiddler]is[variable]] %>sidebar\u003C% else %>story-river\u003C% endif %> where 1em has a different value)\n* 1cm: \u003C\u003Cconvert.to.pixels 1cm>>px\n* 1mm: \u003C\u003Cconvert.to.pixels 1mm>>px\n* 1Q: \u003C\u003Cconvert.to.pixels 1Q>>px\n* 1in: \u003C\u003Cconvert.to.pixels 1in>>px\n* 1pc: \u003C\u003Cconvert.to.pixels 1pc>>px\n* 1pt: \u003C\u003Cconvert.to.pixels 1pt>>px\n\n","revision":"0","bag":"default"}
 ,
 {"title":"Star me on GitHub!","created":"20250524072817756","modified":"20250524072917725","tags":"GitHub Plugin LikeyLikey","type":"text/vnd.tiddlywiki","text":"\u003Cdiv class=\"\" style=\"position: relative; width: 100%; text-align: center;\">\n\u003Ca href=\"https://github.com/BurningTreeC/tiddlywiki-sidebar-slider\" target=\"_blank\" class=\"tc-red-icon\">\u003Csvg enable-background=\"new 0 0 24 24\" viewBox=\"0 0 24 24\" width=\"240pt\" height=\"240pt\">\u003Cg>\u003Crect fill=\"none\" height=\"24\" width=\"24\" x=\"0\"/>\u003Cpolygon points=\"14.43,10 12,2 9.57,10 2,10 8.18,14.41 5.83,22 12,17.31 18.18,22 15.83,14.41 22,10\"/>\u003C/g>\u003C/svg>\u003C/a>\n\u003C/div>","revision":"0","bag":"default"}
 
