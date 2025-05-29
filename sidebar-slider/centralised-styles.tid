@@ -28,7 +28,7 @@ tags: [[$:/tags/Stylesheet]]
 		padding-left: <<get.theme.metric storypaddingleft>>;
 	}
 
-	html .tc-sidebar-scrollable {
+	html .<<get.theme.option sidebarclass>> {
 		text-align: left;
 		left: 50%;
 		right: 0;
@@ -36,7 +36,7 @@ tags: [[$:/tags/Stylesheet]]
 		width: auto;
 	}
 
-	body.tc-body .tc-sidebar-left .tc-sidebar-scrollable {
+	body.tc-body .tc-sidebar-left .<<get.theme.option sidebarclass>> {
 		margin-left: 0;
 		right: 50%;
 		left: 0;
@@ -46,12 +46,12 @@ tags: [[$:/tags/Stylesheet]]
 		padding-left: 42px;
 	}
 
-	html[dir="rtl"] body.tc-body .tc-sidebar-left .tc-sidebar-scrollable {
+	html[dir="rtl"] body.tc-body .tc-sidebar-left .<<get.theme.option sidebarclass>> {
 		padding-right: 42px;
 		padding-left: 0;
 	}
 
-	html[dir="rtl"] .tc-story-river, html[dir="rtl"] .tc-sidebar-scrollable {
+	html[dir="rtl"] .tc-story-river, html[dir="rtl"] .<<get.theme.option sidebarclass>> {
 		text-align: right;
 	}
 

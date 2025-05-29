@@ -36,25 +36,25 @@ tags: $:/tags/Stylesheet
 		padding: 12px;
 	}
 
-	html body.tc-body div.tc-sidebar-scrollable {
+	html body.tc-body div.<<get.theme.option sidebarclass>> {
 		padding: 12px 0 12px 12px;
 	}
 
-	html body.tc-body .tc-sidebar-left div.tc-sidebar-scrollable {
+	html body.tc-body .tc-sidebar-left div.<<get.theme.option sidebarclass>> {
 		padding: 12px 12px 12px 12px;
 	}
 
-	html[dir="rtl"] body.tc-body .tc-sidebar-left div.tc-sidebar-scrollable {
+	html[dir="rtl"] body.tc-body .tc-sidebar-left div.<<get.theme.option sidebarclass>> {
 		padding: 12px 12px 12px 0;
 	}
 
 	<%if [{$:/themes/tiddlywiki/vanilla/options/sidebarlayout}match[fixed-fluid]] %>
 
-		html body.tc-body div.tc-sidebar-scrollable {
+		html body.tc-body div.<<get.theme.option sidebarclass>> {
 			left: clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + 42px),calc(<<get.theme.metric storyright>> + 42px),calc(100% - <<get.theme.metric sidebarminwidth>> + 42px));
 		}
 
-		html body.tc-body .tc-sidebar-left div.tc-sidebar-scrollable {
+		html body.tc-body .tc-sidebar-left div.<<get.theme.option sidebarclass>> {
 			left: 0;
 			right: clamp(calc(<<get.theme.metric storyleft>> + <<get.theme.metric storyminwidth>> + 42px),calc(<<get.theme.metric storyright>> + 42px),calc(100% - <<get.theme.metric sidebarminwidth>> + 42px));
 		}

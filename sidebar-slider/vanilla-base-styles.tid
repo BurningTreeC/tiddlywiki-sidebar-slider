@@ -829,7 +829,7 @@ button.tc-tag-label, span.tc-tag-label {
 	border-radius: 1em;
 }
 
-.tc-sidebar-scrollable .tc-tag-label {
+.<<get.theme.option sidebarclass>> .tc-tag-label {
 	text-shadow: none;
 }
 
@@ -1025,7 +1025,7 @@ button.tc-btn-invisible.tc-remove-tag-button {
 		margin: 21px -21px 21px -21px;
 	}
 
-	.tc-sidebar-scrollable {
+	.<<get.theme.option sidebarclass>> {
 		position: fixed;
 		top: {{$:/themes/tiddlywiki/vanilla/metrics/storytop}};
 		bottom: 0;
@@ -1042,25 +1042,25 @@ button.tc-btn-invisible.tc-remove-tag-button {
 		padding: 42px <<get.theme.metric storypaddingright>> 42px <<get.theme.metric storypaddingleft>>;
 	}
 
-	html[dir="rtl"] .tc-sidebar-left .tc-sidebar-scrollable, .tc-sidebar-left .tc-sidebar-scrollable {
+	html[dir="rtl"] .tc-sidebar-left .<<get.theme.option sidebarclass>>, .tc-sidebar-left .<<get.theme.option sidebarclass>> {
 		left: 0;
 		margin: 0 -42px 0 0;
 	}
 
-	html[dir="rtl"] .tc-sidebar-scrollable {
+	html[dir="rtl"] .<<get.theme.option sidebarclass>> {
 		padding-right: <<get.theme.metric sidebarpadding>>;
 		padding-left: 0;
 	}
 
-	.tc-sidebar-scrollable {
+	.<<get.theme.option sidebarclass>> {
 		left: clamp(min(calc(<<get.theme.metric storyminwidth>> + <<get.theme.metric storyleft>> - <<get.theme.storywidthoverlap>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>>),calc(100% - <<get.theme.metric sidebarminwidth>>)),<<get.theme.metric storyright>>,calc(100% - <<get.theme.metric sidebarminwidth>> + <<get.story-sidebar.overlap>>));
 	}
 
-	html[dir="rtl"] .tc-sidebar-left .tc-sidebar-scrollable, .tc-sidebar-left .tc-sidebar-scrollable {
+	html[dir="rtl"] .tc-sidebar-left .<<get.theme.option sidebarclass>>, .tc-sidebar-left .<<get.theme.option sidebarclass>> {
 		right: clamp(min(calc(<<get.theme.metric storyminwidth>> + <<get.theme.metric storyleft>> - <<get.theme.storywidthoverlap>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>>),calc(100% - <<get.theme.metric sidebarminwidth>>)),<<get.theme.metric storyright>>,calc(100% - <<get.theme.metric sidebarminwidth>> + <<get.story-sidebar.overlap>>));
 	}
 
-	html[dir="rtl"] .tc-sidebar-scrollable:not(.tc-sidebar-left .tc-sidebar-scrollable) {
+	html[dir="rtl"] .<<get.theme.option sidebarclass>>:not(.tc-sidebar-left .<<get.theme.option sidebarclass>>) {
 		left: clamp(min(calc(<<get.theme.metric storyminwidth>> + <<get.theme.metric storyleft>> - <<get.theme.storywidthoverlap>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>>),calc(100% - <<get.theme.metric sidebarminwidth>>)),<<get.theme.metric storyright>>,calc(100% - <<get.theme.metric sidebarminwidth>> + <<get.story-sidebar.overlap>>));
 	}
 
@@ -1571,25 +1571,25 @@ html body.tc-body.tc-single-tiddler-window {
 		width: 100%;
 	}
 
-	.tc-sidebar-scrollable {
+	.<<get.theme.option sidebarclass>> {
 		left: auto;
 		bottom: 0;
 		right: 0;
 		width: clamp(<<get.theme.metric sidebarminwidth>>,<<get.theme.metric sidebarwidth>>,(100% - <<get.theme.metric storyminwidth>> - <<get.theme.metric storyleft>> + <<get.story-sidebar.overlap>> - <<get.theme.storyleftpadding.excess>> - <<get.theme.storyrightpadding.excess>>));
 	}
 
-	.tc-sidebar-left .tc-sidebar-scrollable {
+	.tc-sidebar-left .<<get.theme.option sidebarclass>> {
 		left: 0;
 		right: auto;
 		width: clamp(<<get.theme.metric sidebarminwidth>>,<<get.theme.metric sidebarwidth>>,(100% - <<get.theme.metric storyminwidth>> - <<get.theme.metric storyleft>> + <<get.story-sidebar.overlap>> - <<get.theme.storyleftpadding.excess>> - <<get.theme.storyrightpadding.excess>>));
 	}
 
-	html[dir="rtl"] .tc-sidebar-left .tc-sidebar-scrollable {
+	html[dir="rtl"] .tc-sidebar-left .<<get.theme.option sidebarclass>> {
 		padding-right: <<get.theme.metric sidebarpadding>>;
 		right: auto;
 	}
 
-	html[dir="rtl"] .tc-sidebar-scrollable:not(.tc-sidebar-left .tc-sidebar-scrollable) {
+	html[dir="rtl"] .<<get.theme.option sidebarclass>>:not(.tc-sidebar-left .<<get.theme.option sidebarclass>>) {
 		padding-right: <<get.theme.metric sidebarpadding>>;
 		padding-left: 0;
 	}
