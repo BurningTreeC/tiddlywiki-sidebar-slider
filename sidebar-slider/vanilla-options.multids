@@ -1,4 +1,5 @@
 title: $:/themes/tiddlywiki/vanilla/options/
 
+sidebarclass: tc-sidebar-scrollable
 sidebarposition: right
 sidebarresizer: show

@@ -3,6 +3,7 @@ title: $:/language/
 Left: Left
 Right: Right
 ThemeTweaks/ThemeTweaks/Hint: You can tweak certain aspects of the ''<$text text={{{ [<get.current.theme>get[name]] :else[[current]] }}}/>'' theme.
+ThemeTweaks/Options/SidebarClass: CSS class of the sidebar
 ThemeTweaks/Options/SidebarPosition: Sidebar position
 ThemeTweaks/Options/SidebarResizer: Sidebar resizer
 ThemeTweaks/Metrics/PreviewSliderWidth: Preview slider width
