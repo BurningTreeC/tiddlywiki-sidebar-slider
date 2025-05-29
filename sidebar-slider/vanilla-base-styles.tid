@@ -990,7 +990,7 @@ button.tc-btn-invisible.tc-remove-tag-button {
 	padding-left: 7px;
 }
 
-.tc-story-river {
+.<<get.theme.option storyriverclass>> {
 	position: relative;
 }
 
@@ -1013,7 +1013,7 @@ button.tc-btn-invisible.tc-remove-tag-button {
 
 	""">>
 
-	.tc-story-river {
+	.<<get.theme.option storyriverclass>> {
 		position: relative;
 		padding: 0;
 	}
@@ -1037,7 +1037,7 @@ button.tc-btn-invisible.tc-remove-tag-button {
 		padding: 71px 0 28px <<get.theme.metric sidebarpadding>>;
 	}
 
-	.tc-story-river {
+	.<<get.theme.option storyriverclass>> {
 		top: {{$:/themes/tiddlywiki/vanilla/metrics/storytop}};
 		padding: 42px <<get.theme.metric storypaddingright>> 42px <<get.theme.metric storypaddingleft>>;
 	}
@@ -1064,13 +1064,13 @@ button.tc-btn-invisible.tc-remove-tag-button {
 		left: clamp(min(calc(<<get.theme.metric storyminwidth>> + <<get.theme.metric storyleft>> - <<get.theme.storywidthoverlap>> + <<get.theme.storyleftpadding.excess>> + <<get.theme.storyrightpadding.excess>>),calc(100% - <<get.theme.metric sidebarminwidth>>)),<<get.theme.metric storyright>>,calc(100% - <<get.theme.metric sidebarminwidth>> + <<get.story-sidebar.overlap>>));
 	}
 
-	.tc-story-river {
+	.<<get.theme.option storyriverclass>> {
 		left: max(0px,<<get.theme.metric storyleft>>);
 		right: min(clamp(calc(<<get.theme.metric sidebarminwidth>> - <<get.theme.storywidthoverlap>> - <<get.story-sidebar.overlap>>),calc(100% - <<get.theme.metric storywidth>> - <<get.theme.metric storyleft>>),calc(100% - <<get.theme.metric storyminwidth>> - <<get.theme.metric storyleft>>)),calc(100% - <<get.theme.metric storyminwidth>> - <<get.theme.metric storyleft>>));
 		width: clamp(<<get.theme.metric storyminwidth>>,<<get.theme.metric storywidth>>,calc(100% - <<get.theme.metric sidebarminwidth>> + <<get.story-sidebar.overlap>> - <<get.theme.metric storyleft>> + <<get.theme.storywidthoverlap>>));
 	}
 
-	.tc-sidebar-left .tc-story-river {
+	.tc-sidebar-left .<<get.theme.option storyriverclass>> {
 		display: flex;
 		align-items: flex-end;
 		flex-direction: column;
@@ -1078,13 +1078,13 @@ button.tc-btn-invisible.tc-remove-tag-button {
 		right: max(0px,<<get.theme.metric storyleft>>);
 	}
 
-	html[dir="rtl"] .tc-sidebar-left .tc-story-river {
+	html[dir="rtl"] .tc-sidebar-left .<<get.theme.option storyriverclass>> {
 		align-items: flex-start;
 		left: min(clamp(calc(<<get.theme.metric sidebarminwidth>> - <<get.theme.storywidthoverlap>> - <<get.story-sidebar.overlap>>),calc(100% - <<get.theme.metric storywidth>> - <<get.theme.metric storyleft>>),calc(100% - <<get.theme.metric storyminwidth>> - <<get.theme.metric storyleft>>)),calc(100% - <<get.theme.metric storyminwidth>> - <<get.theme.metric storyleft>>));
 		right: max(0px,<<get.theme.metric storyleft>>);
 	}
 
-	html[dir="rtl"] .tc-story-river:not(.tc-sidebar-left .tc-story-river) {
+	html[dir="rtl"] .<<get.theme.option storyriverclass>>:not(.tc-sidebar-left .<<get.theme.option storyriverclass>>) {
 		display: flex;
 		align-items: flex-end;
 		flex-direction: column;
@@ -1093,28 +1093,28 @@ button.tc-btn-invisible.tc-remove-tag-button {
 
 <<if-no-sidebar """
 
-	.tc-story-river {
+	.<<get.theme.option storyriverclass>> {
 		width: calc(100% - max(0px,{{$:/themes/tiddlywiki/vanilla/metrics/storyleft}}));
 	}
 
-	.tc-sidebar-left .tc-story-river {
+	.tc-sidebar-left .<<get.theme.option storyriverclass>> {
 		right: max(0px,{{$:/themes/tiddlywiki/vanilla/metrics/storyleft}});
 		left: 0;
 	}
 
-	html[dir="rtl"] .tc-sidebar-left .tc-story-river {
+	html[dir="rtl"] .tc-sidebar-left .<<get.theme.option storyriverclass>> {
 		left: 0;
 		right: max(0px,{{$:/themes/tiddlywiki/vanilla/metrics/storyleft}});
 	}
 
-	html[dir="rtl"] .tc-story-river:not(.tc-sidebar-left .tc-story-river) {
+	html[dir="rtl"] .<<get.theme.option storyriverclass>>:not(.tc-sidebar-left .<<get.theme.option storyriverclass>>) {
 		right: 0;
 		left: max(0px,{{$:/themes/tiddlywiki/vanilla/metrics/storyleft}});
 	}
 
 """>>
 
-	.tc-story-river.tc-static-story-river {
+	.<<get.theme.option storyriverclass>>.tc-static-story-river {
 		margin-right: 0;
 		padding-right: 42px;
 	}
@@ -1131,12 +1131,12 @@ button.tc-btn-invisible.tc-remove-tag-button {
 		display: none;
 	}
 
-	.tc-story-river {
+	.<<get.theme.option storyriverclass>> {
 		margin: 0;
 		padding: 0;
 	}
 
-	.tc-story-river .tc-tiddler-frame {
+	.<<get.theme.option storyriverclass>> .tc-tiddler-frame {
 		margin: 0;
 		border: none;
 		padding: 0;
@@ -1546,7 +1546,7 @@ html body.tc-body.tc-single-tiddler-window {
 
 <<if-fluid-fixed text:"""
 
-	.tc-story-river {
+	.<<get.theme.option storyriverclass>> {
 		position: relative;
 		width: auto;
 		left: 0;
@@ -1554,7 +1554,7 @@ html body.tc-body.tc-single-tiddler-window {
 		margin-right: clamp(calc(<<get.theme.metric sidebarminwidth>> - <<get.story-sidebar.overlap>>),calc(<<get.theme.metric sidebarwidth>> - <<get.story-sidebar.overlap>>),calc(100% - <<get.theme.metric storyleft>> - <<get.theme.metric storyminwidth>> + <<get.story-sidebar.overlap>>));
 	}
 
-	html[dir="rtl"] .tc-sidebar-left .tc-story-river, .tc-sidebar-left .tc-story-river {
+	html[dir="rtl"] .tc-sidebar-left .<<get.theme.option storyriverclass>>, .tc-sidebar-left .<<get.theme.option storyriverclass>> {
 		margin-right: max(0px,<<get.theme.metric storyleft>>);
 		margin-left: clamp(calc(<<get.theme.metric sidebarminwidth>> - <<get.story-sidebar.overlap>>),calc(<<get.theme.metric sidebarwidth>> - <<get.story-sidebar.overlap>>),calc(100% - <<get.theme.metric storyleft>> - <<get.theme.metric storyminwidth>>));
 		left: auto;
@@ -1562,7 +1562,7 @@ html body.tc-body.tc-single-tiddler-window {
 		right: 0;
 	}
 
-	html[dir="rtl"] .tc-story-river:not(.tc-sidebar-left .tc-story-river) {
+	html[dir="rtl"] .<<get.theme.option storyriverclass>>:not(.tc-sidebar-left .<<get.theme.option storyriverclass>>) {
 		left: auto;
 		right: 0;
 	}
@@ -1601,16 +1601,16 @@ html body.tc-body.tc-single-tiddler-window {
 
 """ hiddenSidebarText:"""
 
-	.tc-story-river {
+	.<<get.theme.option storyriverclass>> {
 		margin-right: 0;
 	}
 
-	.tc-sidebar-left .tc-story-river {
+	.tc-sidebar-left .<<get.theme.option storyriverclass>> {
 		margin-left: max(0px,<<get.theme.metric storyleft>>);
 		margin-right: 0;
 	}
 
-	html[dir="rtl"] .tc-sidebar-left .tc-story-river {
+	html[dir="rtl"] .tc-sidebar-left .<<get.theme.option storyriverclass>> {
 		margin-left: 0;
 		margin-right: max(0px,<<get.theme.metric storyleft>>);
 	}

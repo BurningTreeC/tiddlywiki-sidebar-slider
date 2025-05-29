@@ -3,3 +3,4 @@ title: $:/themes/tiddlywiki/vanilla/options/
 sidebarclass: tc-sidebar-scrollable
 sidebarposition: right
 sidebarresizer: show
+storyriverclass: tc-story-river

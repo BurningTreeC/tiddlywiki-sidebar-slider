@@ -6,6 +6,7 @@ ThemeTweaks/ThemeTweaks/Hint: You can tweak certain aspects of the ''<$text text
 ThemeTweaks/Options/SidebarClass: CSS class of the sidebar
 ThemeTweaks/Options/SidebarPosition: Sidebar position
 ThemeTweaks/Options/SidebarResizer: Sidebar resizer
+ThemeTweaks/Options/StoryRiverClass: CSS class of the "story river"
 ThemeTweaks/Metrics/PreviewSliderWidth: Preview slider width
 ThemeTweaks/Metrics/PreviewSliderWidth/Hint: the width of the slider between editor and editor preview
 ThemeTweaks/Metrics/SidebarPadding: Sidebar padding

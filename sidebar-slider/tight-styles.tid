@@ -28,7 +28,7 @@ tags: $:/tags/Stylesheet
 		font-size: 0.8em;
 	}
 
-	html body.tc-body section.tc-story-river {
+	html body.tc-body section.<<get.theme.option storyriverclass>> {
 		padding: 0px <<get.theme.metric storypaddingright>> 0px <<get.theme.metric storypaddingleft>>;
 	}
 

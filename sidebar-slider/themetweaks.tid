@@ -70,7 +70,8 @@ caption: {{$:/language/ThemeTweaks/ThemeTweaks}}
 |<$link to="$:/themes/tiddlywiki/vanilla/options/codewrapping"><<lingo Options/CodeWrapping>></$link> |<$select tiddler="$:/themes/tiddlywiki/vanilla/options/codewrapping"><option value="pre">{{$:/language/No}}</option><option value="pre-wrap">{{$:/language/Yes}}</option></$select> |
 |<$link to={{{ [function[get.base.theme.option],<get.current.theme>,[sidebarposition]first[]] }}}><<lingo Options/SidebarPosition>></$link> |<$select tiddler={{{ [function[get.base.theme.option],<get.current.theme>,[sidebarposition]first[]] }}}><option value="right">{{$:/language/Right}}</option><option value="left">{{$:/language/Left}}</option></$select> |
 |<$link to={{{ [function[get.base.theme.option],<get.current.theme>,[sidebarresizer]first[]] }}}><<lingo Options/SidebarResizer>></$link> |<$select tiddler={{{ [function[get.base.theme.option],<get.current.theme>,[sidebarresizer]first[]] }}}><option value="hide">{{$:/language/No}}</option><option value="show">{{$:/language/Yes}}</option></$select> |
-|<$link to={{{ [function[get.base.theme.option],<get.current.theme>,[sidebaclass]first[]] }}}><<lingo Options/SidebarClass>></$link> |<$edit-text tag="input" tiddler={{{ [function[get.base.theme.option],<get.current.theme>,[sidebarclass]first[]] }}}/> |
+|<$link to={{{ [function[get.base.theme.option],<get.current.theme>,[storyriverclass]first[]] }}}><<lingo Options/StoryRiverClass>></$link> |<$edit-text tag="input" tiddler={{{ [function[get.base.theme.option],<get.current.theme>,[storyriverclass]first[]] }}}/> |
+|<$link to={{{ [function[get.base.theme.option],<get.current.theme>,[sidebarclass]first[]] }}}><<lingo Options/SidebarClass>></$link> |<$edit-text tag="input" tiddler={{{ [function[get.base.theme.option],<get.current.theme>,[sidebarclass]first[]] }}}/> |
 
 ! <<lingo Settings>>
 
